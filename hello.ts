@@ -1,4 +1,4 @@
-import { flashNotification } from "@silverbulletmd/plugos-silverbullet-syscall/editor";
+import { editor } from "$sb/silverbullet-syscall/mod.ts";
 
 const loneRangerQuotes = [
   "Hi-Yo! Silver",
@@ -8,5 +8,7 @@ const loneRangerQuotes = [
 ];
 
 export async function helloWorld() {
-  await flashNotification(loneRangerQuotes[Math.floor(Math.random() * loneRangerQuotes.length)]);
+  await editor.flashNotification(
+    loneRangerQuotes[Math.floor(Math.random() * loneRangerQuotes.length)],
+  );
 }

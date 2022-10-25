@@ -1,5 +1,7 @@
 name: hello-world
 version: 0.1
+imports:
+  - https://get.silverbullet.md/global.plug.json
 functions:
   helloWorld:
     path: "./hello.ts:helloWorld"
