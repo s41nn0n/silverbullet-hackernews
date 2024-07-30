@@ -4,7 +4,7 @@
 Insert your plug description here
 
 ## Build
-To build this plug, make sure you have [SilverBullet installed](https://silverbullet.md/Install). Then, build the plug with:
+To build this plug, make sure you have [SilverBullet installed with Deno](https://silverbullet.md/Install/Deno). Then, build the plug with:
 
 ```shell
 deno task build
@@ -22,7 +22,7 @@ Then, copy the resulting `.plug.js` file into your space's `_plug` folder. Or bu
 deno task build && cp *.plug.js /my/space/_plug/
 ```
 
-SilverBullet will automatically sync and load the new version of the plug (or speed up this process by running the {[Sync: Now]} command).
+SilverBullet will automatically sync and load the new version of the plug, just watch the logs (browser and server) to see when this happens.
 
 ## Installation
 If you would like to install this plug straight from Github, make sure you have the `.js` file committed to the repo and simply add

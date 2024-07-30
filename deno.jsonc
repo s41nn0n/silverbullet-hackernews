@@ -1,8 +1,7 @@
 {
-  "importMap": "import_map.json",
   "tasks": {
-    "build": "silverbullet plug:compile --importmap import_map.json hello.plug.yaml",
-    "watch": "silverbullet plug:compile --importmap import_map.json hello.plug.yaml -w"
+    "build": "silverbullet plug:compile -c deno.jsonc hello.plug.yaml",
+    "watch": "silverbullet plug:compile -c deno.jsonc hello.plug.yaml -w"
   },
   "lint": {
     "rules": {
@@ -15,5 +14,8 @@
       "**/*.md",
       "*.plug.js"
     ]
+  },
+  "imports": {
+    "$sb/": "https://deno.land/x/silverbullet/plug-api/"
   }
 }
