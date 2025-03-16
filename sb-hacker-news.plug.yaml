@@ -1,4 +1,4 @@
-name: hello
+name: sb-hacker-news
 requiredPermissions:
   - fetch
 config:
