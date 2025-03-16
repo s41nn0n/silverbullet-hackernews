@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "build": "silverbullet plug:compile -c deno.jsonc hello.plug.yaml",
-    "watch": "silverbullet plug:compile -c deno.jsonc hello.plug.yaml -w"
+    "build": "silverbullet plug:compile -c deno.jsonc sb-hacker-news.plug.yaml",
+    "watch": "silverbullet plug:compile -c deno.jsonc sb-hacker-news.plug.yaml -w --dist ..\\test_space\\_plug"
   },
   "lint": {
     "rules": {
@@ -12,7 +12,8 @@
     "exclude": [
       "*.md",
       "**/*.md",
-      "*.plug.js"
+      "*.plug.js",
+      "test_space/**.*"
     ]
   },
   "imports": {

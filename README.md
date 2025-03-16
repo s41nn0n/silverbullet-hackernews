@@ -1,7 +1,12 @@
 
-# SilverBullet plug template
+# SilverBullet plug for Hacker News
 
-Insert your plug description here
+## Installation
+If you would like to install this plug straight from Github, make sure you have the `.js` file committed to the repo and simply add
+
+```
+- github:s41nn0n/silverbullet-hackernews/silver.plug.js
+```
 
 ## Build
 To build this plug, make sure you have [SilverBullet installed with Deno](https://silverbullet.md/Install/Deno). Then, build the plug with:

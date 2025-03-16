@@ -1,0 +1,31 @@
+name: hello
+requiredPermissions:
+  - fetch
+config:
+  schema.config.properties:
+    maxResults:
+      type:
+      nullable: true
+      default: 10
+    minPoints:
+      type:
+      nullable: true
+      default: 10
+
+functions:
+  searchHackerNews:
+    path: sb-hacker-news.ts:searchHackerNews
+    command:
+      name: "HN Search"
+  queryTopStories:
+    path: sb-hacker-news.ts:frontPage
+    command:
+      name: "HN Front Page"
+  hide:
+    path: sb-hacker-news.ts:hide
+#  writePageGrepResult:
+#    path: grep.ts:writeFileGrepResult
+#    pageNamespace:
+#      pattern: "GREP RESULT 🔍"
+#      operation: readFile
+
