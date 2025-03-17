@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "build": "silverbullet plug:compile -c deno.jsonc sb-hacker-news.plug.yaml",
-    "watch": "silverbullet plug:compile -c deno.jsonc sb-hacker-news.plug.yaml -w --dist ..\\test_space\\_plug"
+    "build": "silverbullet plug:compile -c deno.jsonc hackernews.plug.yaml",
+    "watch": "silverbullet plug:compile --debug -c deno.jsonc hackernews.plug.yaml -w --dist ..\\test_space\\_plug"
   },
   "lint": {
     "rules": {

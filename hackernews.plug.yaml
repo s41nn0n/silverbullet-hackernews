@@ -1,6 +1,9 @@
-name: sb-hacker-news
+name: hackernews
+version: 0.0.1
 requiredPermissions:
   - fetch
+imports:
+  - https://get.silverbullet.md/global.plug.json
 config:
   schema.config.properties:
     maxResults:
@@ -14,18 +17,15 @@ config:
 
 functions:
   searchHackerNews:
-    path: sb-hacker-news.ts:searchHackerNews
+    path: hackernews.ts:searchHackerNews
     command:
       name: "HN Search"
   queryTopStories:
-    path: sb-hacker-news.ts:frontPage
+    path: hackernews.ts:frontPage
     command:
       name: "HN Front Page"
   hide:
-    path: sb-hacker-news.ts:hide
-#  writePageGrepResult:
-#    path: grep.ts:writeFileGrepResult
-#    pageNamespace:
-#      pattern: "GREP RESULT 🔍"
-#      operation: readFile
-
+    path: hackernews.ts:hide
+  hackerNewsComment:
+    path: ./hackernews.ts:widget
+    codeWidget: HN

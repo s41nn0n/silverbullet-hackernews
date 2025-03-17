@@ -1,60 +1,57 @@
 
 # SilverBullet plug for Hacker News
 
+This plug adds support to search, query and add comments to your notes. 
+
 ## Installation
-If you would like to install this plug straight from Github, make sure you have the `.js` file committed to the repo and simply add
+Run the {[Plugs: Add]} command and paste in: `github:s41nn0n/silverbullet-hackernews`
 
-```
-- github:s41nn0n/silverbullet-hackernews/sb-hacker-news.plug.js
-```
+## Use
 
-## Build
-To build this plug, make sure you have [SilverBullet installed with Deno](https://silverbullet.md/Install/Deno). Then, build the plug with:
+Put a `HN` block in your markdown:
 
-```shell
-deno task build
-```
+    ```HN
+    43388908
+    ```
 
-Or to watch for changes and rebuild automatically
+or
 
-```shell
-deno task watch
-```
+    ```HN
+    id: 43388908
+    depth: 1
+    children: 1
+    ```
 
-Then, copy the resulting `.plug.js` file into your space's `_plug` folder. Or build and copy in one command:
+This will then fetch the item and add it to your SB!
 
-```shell
-deno task build && cp *.plug.js /my/space/_plug/
-```
+- id: This is the ID (comment, job etc)
+  - required
+- depth(1): how far down the rabit hole you want to go? 
+  - -1 is all
+- children(-1): fetch this many children
+  - -1 all
 
-SilverBullet will automatically sync and load the new version of the plug, just watch the logs (browser and server) to see when this happens.
+Note: The more items that need to be retrieved the longer it takes.
 
-to your `PLUGS` file, run `Plugs: Update` command and off you go!
+## Config
 
-
-Top 🏆 🔝
-Search 🔍 🕵️‍♂️
-Comment 💬 📝
-Link 🔗 🌐
-
-🖊️ ✍️ (Writing-related)
-👤 🧑‍💻 (Person-related)
-🏗️ 🎨 (Creator-related)
-📖 📝 (Author-related)
+You can use a `space-config` block to customize this plug. 
 
 
-❌ 🔴 (General "close" or "stop")
-🔒 🛑 (Locking or stopping)
-🏁 ✖️ (Ending something)
+   ```space-config
+   hackernews:
+     inline: "11.4.0"
+     baseOutPath: ""
+   ```
 
+- inline
+  - true: New page
+  - false: pop out : dynamic page
+- panelType: Where you want your search to be output
+  - lhs
+  - rhs
+  - modal
+- baseOutPath: 
+  - html: it will output to a modal (dynamic page)
+  - default: this will save to a page 
 
-❌ (Close button)
-🔙 (Back)
-🔻 (Collapse)
-🚪 (Exit)
-🔒 (Lock, if closing means restricting access)
-
-💾 (Classic save/disk icon)
-📥 (Download/save)
-✅ (Confirm/save changes)
-🔖 (Bookmark/save for later)
